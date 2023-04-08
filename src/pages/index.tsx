@@ -8,7 +8,7 @@ export default function Home() {
                 <meta name="description" content="A simple to-do list application"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
-            <main>
+            <main className='w-full h-full flex items-center justify-center'>
                 Hello world!
             </main>
         </>
