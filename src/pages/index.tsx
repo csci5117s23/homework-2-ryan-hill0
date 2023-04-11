@@ -10,7 +10,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
             <main className='w-full h-full flex flex-col gap-8 items-center justify-center'>
-                <h1>Ryan&lsquo;s To-Do List App</h1>
+                <h1>Ryan&apos;s To-Do List App</h1>
                 <SignIn />
             </main>
         </>
