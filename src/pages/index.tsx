@@ -1,7 +1,15 @@
 import Head from 'next/head'
-import {SignIn} from "@clerk/nextjs";
+import {SignIn, useAuth} from "@clerk/nextjs";
+import {useRouter} from "next/router";
 
 export default function Home() {
+    const {isSignedIn} = useAuth();
+    const {push} = useRouter();
+
+    if (isSignedIn) {
+        push('/todos').finally();
+    }
+
     return (
         <>
             <Head>
