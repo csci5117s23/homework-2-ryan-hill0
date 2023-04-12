@@ -39,7 +39,7 @@ export async function addTodo(apiToken: string, newTodoContent: string): Promise
     return await result.json();
 }
 
-async function getTodos(apiToken: string, isDone: boolean): Promise<Todo[]> {
+export async function getTodos(apiToken: string, isDone: boolean): Promise<Todo[]> {
     const result = await fetch(`${backendBaseUrl}/todos?isDone=${isDone}`, {
         'method': 'GET',
         'headers': {'Authorization': `Bearer ${apiToken}`}
@@ -48,15 +48,7 @@ async function getTodos(apiToken: string, isDone: boolean): Promise<Todo[]> {
     return await result.json();
 }
 
-export async function getIncompleteTodos(apiToken: string): Promise<Todo[]> {
-    return getTodos(apiToken, false);
-}
-
-export async function getCompleteTodos(apiToken: string): Promise<Todo[]> {
-    return getTodos(apiToken, true);
-}
-
-async function setTodoCompleteness(apiToken: string, todo: Todo, isDone: boolean): Promise<any> {
+export async function setTodoCompleteness(apiToken: string, todo: Todo, isDone: boolean): Promise<any> {
     todo.isDone = isDone;
 
     const result = await fetch(`${backendBaseUrl}/todos/${todo._id}`, {
@@ -69,12 +61,4 @@ async function setTodoCompleteness(apiToken: string, todo: Todo, isDone: boolean
     });
 
     return await result.json();
-}
-
-export async function completeTodo(apiToken: string, todo: Todo): Promise<any> {
-   return await setTodoCompleteness(apiToken, todo, true);
-}
-
-export async function unCompleteTodo(apiToken: string, todo: Todo): Promise<any> {
-    return await setTodoCompleteness(apiToken, todo, false);
 }
