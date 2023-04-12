@@ -51,6 +51,19 @@ export async function getTodos(apiToken: string, isDone: boolean): Promise<Todo[
 export async function setTodoCompleteness(apiToken: string, todo: Todo, isDone: boolean): Promise<any> {
     todo.isDone = isDone;
 
+    return updateTodo(apiToken, todo);
+}
+
+export async function getTodo(apiToken: string, id: string): Promise<Todo> {
+    const result = await fetch(`${backendBaseUrl}/todos/${id}`, {
+        'method': 'GET',
+        'headers': {'Authorization': `Bearer ${apiToken}`}
+    });
+
+    return await result.json();
+}
+
+export async function updateTodo(apiToken: string, todo: Todo): Promise<Todo> {
     const result = await fetch(`${backendBaseUrl}/todos/${todo._id}`, {
         'method': 'PUT',
         'headers': {
