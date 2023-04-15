@@ -10,10 +10,10 @@ Please fill out all the following sections to help us grade your submission:
 
 ## Link to Site
 
-<https://TODO.com/>
+[https://6437597090d13d00080d1e37--superb-licorice-e50f56.netlify.app/](https://6437597090d13d00080d1e37--superb-licorice-e50f56.netlify.app/)
 
 ## Challenge Task
 
-* I started the challenge task: no
-* I completed the challenge task: no
+* I started the challenge task: yes
+* I completed the challenge task: yes
 
