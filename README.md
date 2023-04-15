@@ -10,7 +10,7 @@ Please fill out all the following sections to help us grade your submission:
 
 ## Link to Site
 
-[https://6437597090d13d00080d1e37--superb-licorice-e50f56.netlify.app/](https://6437597090d13d00080d1e37--superb-licorice-e50f56.netlify.app/)
+[https://superb-licorice-e50f56.netlify.app/](https://superb-licorice-e50f56.netlify.app/)
 
 ## Challenge Task
 
